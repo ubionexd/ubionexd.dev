@@ -60,9 +60,7 @@ module.exports = {
       options: {
         contentTypeName: 'Post',
         feedOptions: {
-          title:
-            process.env.SITE_TITLE ||
-            'Geek Blog | Technology Guide, Tips, HowTo, Coding etc.',
+          title: 'ubionexd blog',
           feed_url: process.env.GRIDSOME_BASE_URL
             ? `${process.env.GRIDSOME_BASE_URL}/rss.xml`
             : 'https://xqsit94.github.com/rss.xml',

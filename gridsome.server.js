@@ -33,10 +33,7 @@ module.exports = function (api) {
   api.loadSource(({ addMetadata, addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
 
-    addMetadata(
-      'siteTitle',
-      process.env.SITE_TITLE || 'Technology Guide, Tips, HowTo, Coding etc'
-    )
+    addMetadata('siteTitle', 'ubionexd blog')
     addMetadata('siteAuthor', process.env.SITE_AUTHOR || 'xqsit94')
     addMetadata(
       'siteAuthorUrl',

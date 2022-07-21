@@ -22,24 +22,20 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.use(Vssue, {
     api: GithubV4,
-    owner: process.env.GRIDSOME_VSSUE_OWNER,
-    repo: process.env.GRIDSOME_VSSUE_REPO,
-    clientId: process.env.GRIDSOME_VSSUE_CLIENT_ID,
-    clientSecret: process.env.GRIDSOME_VSSUE_CLIENT_SECRET,
-    perPage: process.env.VSSUE_GRIDSOME_PERPAGE || 15,
-    autoCreateIssue: process.env.GRIDSOME_VSSUE_OWNER || false,
+    owner: process.env.OWNER,
+    repo: process.env.REPO,
+    clientId: process.env.APP_CLIENT_ID,
+    clientSecret: process.env.APP_CLIENT_SECRET,
+    perPage: 15,
+    autoCreateIssue: false,
   })
 
   // Add vue filter to capitalise the first letter of each word
   Vue.filter('capitalise', function (value) {
-      let output = []
-      value.split(' ').forEach(word => {
-        output.push(
-          word.charAt(0).toUpperCase() +
-          word.slice(1).toLowerCase()
-        )
-      })
-      return output.join(' ')
-    }
-  )
+    let output = []
+    value.split(' ').forEach((word) => {
+      output.push(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    })
+    return output.join(' ')
+  })
 }
