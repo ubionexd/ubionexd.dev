@@ -1,11 +1,10 @@
 <template>
-  <Layout>
+  <Layout pageName="404" class="bg-background-secondary m-0 p-0">
     <div
       class="
         bg-gradient-to-r
-        from-secondary-300
-        to-primary-200
-        dark:from-gray-600 dark:to-gray-700
+        light:bg-background-secondary
+        dark:bg-background-secondary
       "
       :style="background"
       id="wrapper"
@@ -56,9 +55,3 @@
     </div>
   </Layout>
 </template>
-
-<style>
-html {
-  background-color: #1a202d;
-}
-</style>

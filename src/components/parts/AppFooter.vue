@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-background-tertiary body-font">
+  <footer class="bg-background-tertiary body-font fixed bottom-0 w-full">
     <div
       class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
     >
@@ -23,7 +23,7 @@
         "
       >
         <a
-          :href="$static.metadata.siteAuthorUrl"
+          href="https://github.com/ubionexd/ubionexd.dev"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-500"
@@ -64,3 +64,4 @@ export default {
   },
 }
 </script>
+

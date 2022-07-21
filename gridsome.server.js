@@ -6,17 +6,17 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 // Include files and configuration needed for cover image generator
-const fs = require("fs-extra")
-const generateCover = require("./src/functions/generate-cover")
+const fs = require('fs-extra')
+const generateCover = require('./src/functions/generate-cover')
 const coverOptions = {
-  imgWidth: "1024",
-  imgHeight: "576",
+  imgWidth: '1024',
+  imgHeight: '576',
   types: [
     {
-      name:     "Posts",
-      typeName: "Post",
-      path:     "blog"
-    }
+      name: 'Posts',
+      typeName: 'Post',
+      path: 'blog',
+    },
   ],
   // Set Colours
   // colours:  [
@@ -42,16 +42,6 @@ module.exports = function (api) {
       'siteAuthorUrl',
       process.env.SITE_AUTHOR_URL || 'https://github.com/xqsit94'
     )
-    addMetadata(
-      'archive_title',
-      process.env.ARCHIVE_TITLE ||
-        'NOTE: THIS ARTICLE IS PART OF OUR ARCHIVE AND IS LIKELY OUT OF DATE.'
-    )
-    addMetadata(
-      'archive_text',
-      process.env.ARCHIVE_TEXT ||
-        '(LINKS MAY NOT WORK, DOWNLOADS HAVE NOT BEEN RECENTLY TESTED FOR SAFETY)'
-    )
 
     const category = addCollection('Category')
     category.addReference('categories', 'Category')
@@ -69,17 +59,23 @@ module.exports = function (api) {
         sidebar: {
           type: 'String',
           resolve(obj) {
-            return (obj.sidebar === undefined ? 'Default' : obj.sidebar)
-          }
-        }
-      }
+            return obj.sidebar === undefined ? 'Default' : obj.sidebar
+          },
+        },
+        thumbnail: {
+          type: 'String',
+          resolve(obj) {
+            return obj.thumbnail === undefined ? null : obj.thumbnail
+          },
+        },
+      },
     })
   })
   api.loadSource(async (actions) => {
     if (process.env.AUTO_GENERATE_COVER) {
       // Loop through each type to create a cover image for
       coverOptions.types.forEach(function (type) {
-        console.log("Generating cover images for " + type.name)
+        console.log('Generating cover images for ' + type.name)
         const collection = actions.getCollection(type.typeName)
         const outputPath = `${type.path}`
         fs.ensureDirSync(outputPath)
@@ -90,7 +86,11 @@ module.exports = function (api) {
               fs.access(output, (error) => {
                 if (error) {
                   console.log(`Creating ${output}`)
-                  generateCover(output, node.cover_title ?? node.title, coverOptions)
+                  generateCover(
+                    output,
+                    node.cover_title ?? node.title,
+                    coverOptions
+                  )
                 } else {
                   console.log(`${output} already exists`)
                 }
@@ -100,7 +100,9 @@ module.exports = function (api) {
         })
       })
     } else {
-      console.log("If you would like to automatically generate cover images, set AUTO_GENERATE_COVER in your env file to true.")
+      console.log(
+        'If you would like to automatically generate cover images, set AUTO_GENERATE_COVER in your env file to true.'
+      )
     }
   })
 }

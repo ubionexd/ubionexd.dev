@@ -1,5 +1,5 @@
 <template>
-  <Layout pageName="blog">
+  <Layout pageName="blog" class="bg-background-primary m-0 p-0">
     <section class="body-font">
       <div class="container mx-auto flex flex-wrap py-8">
         <div class="w-full md:w-2/3 flex flex-col pr-0 md:pr-6">

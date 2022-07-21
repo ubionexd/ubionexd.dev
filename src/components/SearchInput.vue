@@ -5,7 +5,7 @@
     <div class="relative w-80">
       <input
         type="text"
-        placeholder='Search (Press  "/" to focus)'
+        placeholder="Search (CTRL + 0)"
         class="
           bg-background-form
           border border-gray-500
@@ -137,7 +137,6 @@ query Search {
         path
         title
         summary
-        is_archived
         thumbnail
         categories {
           id
@@ -250,7 +249,7 @@ export default {
       }
     },
     focusSearch(e) {
-      if (e.key === '/') {
+      if (e.ctrlKey === true && e.key === '0') {
         this.$refs.search.focus()
       }
     },

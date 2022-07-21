@@ -41,15 +41,6 @@
           </span>
           -️ {{ $page.post.date }}
         </div>
-        <div
-          v-if="$page.post.is_archived"
-          class="border border-dashed mb-6 p-5 text-center border-secondary-500"
-        >
-          <div class="text-lg text-secondary-500">
-            {{ $static.metadata.archive_title }}
-          </div>
-          <span class="text-xs">{{ $static.metadata.archive_text }}</span>
-        </div>
         <div class="markdown-body mb-8" v-html="$page.post.content" />
         <div class="flex mb-8 text-sm">
           <g-link
@@ -145,7 +136,6 @@ query Post ($path: String!) {
   post: post (path: $path) {
     title
     summary
-    is_archived
     sidebar
     thumbnail
     path
@@ -181,8 +171,6 @@ query {
     siteTitle
     siteDescription
     siteAuthor
-    archive_title
-    archive_text
   }
 }
 </static-query>
@@ -255,3 +243,9 @@ export default {
 </script>
 
 <style src="../css/github-markdown.css" />
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>

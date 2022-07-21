@@ -7,6 +7,8 @@
       leading-normal
       flex flex-col
       min-h-screen
+      dark:bg-[#262f3d]
+      container-class
     "
     :class="theme"
   >
@@ -184,3 +186,4 @@ export default {
 </script>
 
 <style src="~/css/main.css" />
+
