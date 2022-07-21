@@ -27,7 +27,7 @@ export default function (Vue, { router, head, isClient }) {
     clientId: process.env.APP_CLIENT_ID,
     clientSecret: process.env.APP_CLIENT_SECRET,
     perPage: 15,
-    autoCreateIssue: false,
+    autoCreateIssue: true,
   })
 
   // Add vue filter to capitalise the first letter of each word
