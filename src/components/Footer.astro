@@ -1,11 +1,26 @@
 ---
-import Link from "./Link.astro";
+import Link from './Link.astro'
 
-const today = new Date();
+const today = new Date()
 ---
 
-<footer >
-	<p><Link display={"ubionexd.vercel.app"} url={"https://ubionexd.vercel.app"} /> and it's <Link display={"source code"} url={"https://github.com/ubionexd/ubionexd.dev/tree/astro-rewrite"} /> is licensed under <a href="/LICENSE.txt"><img class="inline" src="/CC-BY-NC.svg" alt="CC BY-NC 4.0" width="83"></a></p>
+<footer class="select-none cursor-default">
+	<p>
+		<Link
+			display={'ubionexd.vercel.app'}
+			url={'https://ubionexd.vercel.app'}
+		/> and it's <Link
+			display={'source code'}
+			url={'https://github.com/ubionexd/ubionexd.dev/tree/astro-rewrite'}
+		/> is licensed under <a href="/LICENSE.txt"
+			><img
+				class="inline"
+				src="/CC-BY-NC.svg"
+				alt="CC BY-NC 4.0"
+				width="83"
+			/>
+		</a>
+	</p>
 </footer>
 <style>
 	footer {
