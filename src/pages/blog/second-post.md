@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Second post"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 22 2022"
+pubDate: "2022.08.19"
 heroImage: "/placeholder-hero.jpg"
 ---
 

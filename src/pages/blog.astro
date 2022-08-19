@@ -1,19 +1,19 @@
 ---
 // Import components
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 
 // Import styles
-import '../styles/global.css';
+import '../styles/global.css'
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	(a, b) =>
 		new Date(b.frontmatter.pubDate).valueOf() -
 		new Date(a.frontmatter.pubDate).valueOf()
-);
+)
 ---
 
 <!DOCTYPE html>
@@ -39,29 +39,33 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 		</style>
 	</head>
 	<body>
-		<Header page={"blog"} />
-		<main>
-			<content>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<time datetime={post.frontmatter.pubDate}>
-									{new Date(
-										post.frontmatter.pubDate
-									).toLocaleDateString("en-us", {
-										year: "numeric",
-										month: "short",
-										day: "numeric",
-									})}
-								</time>
-								<a href={post.url}>{post.frontmatter.title}</a>
-							</li>
-						))
-					}
-				</ul>
-			</content>
-			<Footer />
-		</main>
+		<div class="content">
+			<Header page={'blog'} />
+			<main>
+				<content>
+					<ul>
+						{
+							posts.map((post) => (
+								<li>
+									<time datetime={post.frontmatter.pubDate}>
+										{new Date(
+											post.frontmatter.pubDate
+										).toLocaleDateString('en-us', {
+											year: 'numeric',
+											month: 'short',
+											day: 'numeric',
+										})}
+									</time>
+									<a href={post.url}>
+										{post.frontmatter.title}
+									</a>
+								</li>
+							))
+						}
+					</ul>
+				</content>
+				<Footer />
+			</main>
+		</div>
 	</body>
 </html>
