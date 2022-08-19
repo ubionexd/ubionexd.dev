@@ -1,5 +1,9 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*Global styles*/
 body {
-  font-family: Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 20px;
   text-align: left;
   background-color: #222;
@@ -9,24 +13,27 @@ body {
   color: #fff;
 }
 
+h1,
+h2,
+p,
+li {
+  color: white;
+}
+
+/*Center content*/
 .content {
   max-width: 52rem;
   margin: auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-  color: #fff;
+/*Markdown link styles*/
+a {
+  color: #3273dc;
+  transition-duration: 300ms;
 }
 
-nav a {
-  margin-right: 10px;
+a:hover {
+  color: #6399f0;
 }
 
 textarea {

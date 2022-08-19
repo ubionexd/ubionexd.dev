@@ -5,4 +5,5 @@ description: "Who is ubionexd"
 heroImage: "/placeholder-about.jpg"
 ---
 
-WIP: Write some stuff here
+WIP: Write some stuff here  
+[Example](https://example.com)
