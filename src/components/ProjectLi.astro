@@ -8,4 +8,4 @@ export interface Props {
 const { name, link, description } = Astro.props;
 ---
 
-<li><a target="_blank" href={link}>{name}</a> - {description}</li>
+<li><a class="text-link duration-300 hover:text-hlink" target="_blank" href={link}>{name}</a> - {description}</li>

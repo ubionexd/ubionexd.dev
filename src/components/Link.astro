@@ -1,0 +1,11 @@
+---
+export interface Props {
+    display: String;
+    url: String;
+    target?: String;
+}
+
+const {  display, url, target = "_blank" }:any = Astro.props as Props;
+---
+
+<a class="text-link duration-300 hover:text-hlink" target={target} href={url}>{display}</a>

@@ -1,9 +1,11 @@
 ---
+import Link from "./Link.astro";
+
 const today = new Date();
 ---
 
 <footer >
-	<p><a href="https://ubionexd.vercel.app/">ubionexd.vercel.app</a> and it's <a target="_blank" href="https://github.com/ubionexd/ubionexd.dev">source code</a> is licensed under <a href="/LICENSE.txt"><img class="inline" src="/CC-BY-NC.svg" alt="CC BY-NC 4.0" width="83"></a></p>
+	<p><Link display={"ubionexd.vercel.app"} url={"https://ubionexd.vercel.app"} /> and it's <Link display={"source code"} url={"https://github.com/ubionexd/ubionexd.dev"} /> is licensed under <a href="/LICENSE.txt"><img class="inline" src="/CC-BY-NC.svg" alt="CC BY-NC 4.0" width="83"></a></p>
 </footer>
 <style>
 	footer {

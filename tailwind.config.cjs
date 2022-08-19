@@ -5,6 +5,10 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				'FiraCode': ['"Fira Code"', 'monospace'],
+			},
+			colors: {
+				'link': '#3273dc',
+				'hlink': '#6399f0',
 			}
 		},
 	},
