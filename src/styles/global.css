@@ -1,8 +1,6 @@
 body {
   font-family: Verdana, sans-serif;
-  margin: auto;
   padding: 20px;
-  max-width: 1000px;
   text-align: left;
   background-color: #222;
   word-wrap: break-word;
@@ -10,6 +8,12 @@ body {
   line-height: 1.5;
   color: #fff;
 }
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
 h1,
 h2,
 h3,
