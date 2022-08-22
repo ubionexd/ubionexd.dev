@@ -65,6 +65,7 @@ The blockquote element represents content that is quoted from another source, op
 </body>
 </html>
 ```
+---
 
 ## List Types
 
