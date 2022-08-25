@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'ubionexd.vercel.app',
+  site: 'https://ubionexd.vercel.app',
   integrations: [mdx(), sitemap(), tailwind()]
 });
