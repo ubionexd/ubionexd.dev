@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/BlogPost.astro"
+layout: "../layouts/AboutMe.astro"
 title: "about me"
 description: "Who is ubionexd"
 heroImage: "/placeholder-about.jpg"
