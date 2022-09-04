@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogPost.astro'
 title: 'Emerald Expansions is now out!'
-descriptions: 'Emerald Expansions is the first mod I made, which adds emerald armor, tools and other wierd things.'
+description: 'Emerald Expansions is the first mod I made, which adds emerald armor, tools and other wierd things.'
 pubDate: '2022.08.22'
 heroImage: '/emerald-expansions.png'
 ---
