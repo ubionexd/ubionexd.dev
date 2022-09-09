@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogPost.astro'
 title: 'Stacker 2.0 Released'
 description: 'Stacker 2.0 just released, available for PC and Mac now on GitHub!'
-pubDate: '2022.09.04'
+pubDate: '2022.09.09'
 heroImage: '/thumbnails/stacker-2.0.png'
 ---
 **Stacker 2.0 just got released and its more powerful than ever before!**  
