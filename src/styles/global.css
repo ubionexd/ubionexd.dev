@@ -15,9 +15,14 @@ body {
 
 h1,
 h2,
-p,
+p {
+  color: white;
+}
+
 li {
   color: white;
+  list-style: disc;
+  margin-left: 2rem;
 }
 
 /*Center content*/
@@ -28,12 +33,12 @@ li {
 
 /*Markdown link styles*/
 a {
-  color: #3273dc;
+  color: #3273dc!important;
   transition-duration: 300ms;
 }
 
 a:hover {
-  color: #6399f0;
+  color: #6399f0!important;
 }
 
 textarea {
