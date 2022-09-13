@@ -10,46 +10,45 @@ import '../styles/global.css'
 
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<div class="content">
-			<Header page={'home'} />
-			<main>
-				<h1 class="text-4xl cursor-default select-none">ubionexd</h1>
-				<p class="mb-5">Welcome to my personal website and blog!</p>
-				<p class="mb-3">
-					I'm a hobbyist developer. I like to try out new and
-					interesting technologies and play games. I'm also interested
-					in Minecraft modding, but I can't really write mods yet.
-				</p>
-				<p class="mb-3">
-					I make some usefull programs for myself to get things done
-					easier and share them on GitHub, so maybe I help someone out
-					with them.
-				</p>
-				<p class="mb-3">My important projects:</p>
-				<ul class="list-disc ml-10">
-					<ProjectLi
-						name={'MyIP'}
-						link={'https://github.com/ubionexd/myip'}
-						description={'Grab your IP fast and never ever Google "My ip" again!'}
-					/>
-					<ProjectLi
-						name={'Stacker'}
-						link={'https://github.com/ubionexd/stacker'}
-						description={'Little CLI utility to calculate how many Minecraft stacks are the given amount of items.'}
-					/>
-					<ProjectLi
-						name={'Chronos Client'}
-						link={'https://modrinth.com/modpack/chronos'}
-						description={'Chronos Client is a fast, lightweight client-side modpack, based on the new Quilt loader.'}
-					/>
-				</ul>
-				<p></p>
-			</main>
-			<Footer />
-		</div>
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <div class="content">
+      <Header page={'home'} />
+      <main>
+        <h1 class="text-4xl cursor-default select-none">ubionexd</h1>
+        <p class="mb-5">Welcome to my personal website and blog!</p>
+        <p class="mb-3">
+          I'm a hobbyist developer. I like to try out new and interesting
+          technologies and play games. I'm also interested in Minecraft modding,
+          but I can't really write mods yet.
+        </p>
+        <p class="mb-3">
+          I make some usefull programs for myself to get things done easier and
+          share them on GitHub, so maybe I help someone out with them.
+        </p>
+        <p class="mb-3">My important projects:</p>
+        <ul class="list-disc ml-10">
+          <ProjectLi
+            name={'MyIP'}
+            link={'https://github.com/ubionexd/myip'}
+            description={'Grab your IP fast and never ever Google "My ip" again!'}
+          />
+          <ProjectLi
+            name={'Stacker'}
+            link={'https://github.com/ubionexd/stacker'}
+            description={'Little CLI utility to calculate how many Minecraft stacks are the given amount of items.'}
+          />
+          <ProjectLi
+            name={'Chronos Client'}
+            link={'https://modrinth.com/modpack/chronos'}
+            description={'Chronos Client is a fast, lightweight client-side modpack, based on the new Quilt loader.'}
+          />
+        </ul>
+        <p></p>
+      </main>
+      <Footer />
+    </div>
+  </body>
 </html>
