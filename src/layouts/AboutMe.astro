@@ -6,74 +6,74 @@ import Footer from '../components/Footer.astro'
 import '../styles/global.css'
 
 export interface Props {
-	content: {
-		title: string
-		description: string
-		pubDate?: string
-		updatedDate?: string
-		heroImage?: string
-	}
+  content: {
+    title: string
+    description: string
+    pubDate?: string
+    updatedDate?: string
+    heroImage?: string
+  }
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+  content: { title, description, pubDate, updatedDate, heroImage },
 } = Astro.props as Props
 ---
 
 <html>
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-		</style>
-	</head>
+  <head>
+    <BaseHead title={title} description={description} />
+    <style>
+      .title {
+        font-size: 2em;
+        margin: 0.25em 0 0;
+      }
+      hr {
+        border-top: 1px solid #ddd;
+        margin: 1rem 0;
+      }
+    </style>
+  </head>
 
-	<body>
-		<div class="content">
-			<Header page={title} />
-			<main>
-				<article>
-					{
-						heroImage && (
-							<img
-								width={720}
-								height={360}
-								class="w-[67.5rem] rounded-md select-none"
-								src={heroImage}
-								alt=""
-							/>
-						)
-					}
-					<div class="text-center mb-5 select-none">
-						<h1 class="title font-FiraCode">{title}</h1>
-						{
-							pubDate && (
-								<div class="text-gray-500 font-FiraCode">
-									Published on <time>{pubDate}</time>
-								</div>
-							)
-						}
-						{
-							updatedDate && (
-								<div class="text-gray-500 font-FiraCode">
-									Last updated on <time>{updatedDate}</time>
-								</div>
-							)
-						}
-					</div>
+  <body>
+    <div class="content">
+      <Header page={title} />
+      <main>
+        <article>
+          {
+            heroImage && (
+              <img
+                width={720}
+                height={360}
+                class="w-[67.5rem] rounded-md select-none"
+                src={heroImage}
+                alt="about-me-image"
+              />
+            )
+          }
+          <div class="text-center mb-5 select-none">
+            <h1 class="title font-FiraCode">{title}</h1>
+            {
+              pubDate && (
+                <div class="text-gray-500 font-FiraCode">
+                  Published on <time>{pubDate}</time>
+                </div>
+              )
+            }
+            {
+              updatedDate && (
+                <div class="text-gray-500 font-FiraCode">
+                  Last updated on <time>{updatedDate}</time>
+                </div>
+              )
+            }
+          </div>
 
-					<hr />
-					<slot />
-				</article>
-			</main>
-			<Footer />
-		</div>
-	</body>
+          <hr />
+          <slot />
+        </article>
+      </main>
+      <Footer />
+    </div>
+  </body>
 </html>
