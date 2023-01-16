@@ -5,5 +5,4 @@ description: "Who is ubionexd"
 heroImage: "/placeholder-about.jpg"
 ---
 
-WIP: Write some stuff here  
-[Example](https://example.com)
+This page will be removed and replaced with a projects page with a custom portfolio for every one of my projects.
